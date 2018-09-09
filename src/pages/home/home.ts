@@ -14,7 +14,7 @@ export class HomePage {
 
   stocksPrice: Observable<any>;
   //stocks: any = ['ABEV3', 'PETR4', 'BBAS3', 'BRFS3', 'CAML3', 'CVCB3', 'EZTC3', 'GOLL4', 'IRBR3', 'ITSA4', 'RAIL3', 'SAPR11', 'VULC3'];
-  stocks: any = ['ABEV3', 'PETR4'];
+  stocks: any = ['ABEV3.SA', 'PETR4.SA', 'BBAS3.SA'];
 
   //papeis = [{"symbol": "ABEV3", "price": "10", "lastday": "2018-09-05"}, {"symbol": "PETR4", "price": "20", "lastday": "2018-09-06"}];
   papeis = [];
@@ -28,7 +28,7 @@ export class HomePage {
   }
 
   getPrice(symbol) {
-    return this.httpClient.get('https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol='+symbol+'.SA&outputsize=compact&apikey=46CINMD6102WBF2T')
+    return this.httpClient.get('https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol='+symbol+'&outputsize=compact&apikey=46CINMD6102WBF2T')
   }
 
   ngOnInit(){
