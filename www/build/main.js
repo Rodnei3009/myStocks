@@ -62,7 +62,7 @@ var HomePage = /** @class */ (function () {
         this.navCtrl = navCtrl;
         this.httpClient = httpClient;
         //stocks: any = ['ABEV3', 'PETR4', 'BBAS3', 'BRFS3', 'CAML3', 'CVCB3', 'EZTC3', 'GOLL4', 'IRBR3', 'ITSA4', 'RAIL3', 'SAPR11', 'VULC3'];
-        this.stocks = ['ABEV3.SA', 'PETR4.SA', 'BBAS3.SA', 'BRFS3.SA', 'CAML3.SA', 'EZTC3.SA', 'GOLL4.SA', 'IRBR3.SA', 'ITSA4.SA', 'RAIL3.SA', 'VULC3.SA'];
+        this.stocks = ['ABEV3.SA', 'PETR4.SA', 'BBAS3.SA', 'BRFS3.SA', 'CAML3.SA', 'GOLL4.SA', 'IRBR3.SA', 'ITSA4.SA', 'RAIL3.SA', 'VULC3.SA'];
         //papeis = [{"symbol": "ABEV3", "price": "10", "lastday": "2018-09-05"}, {"symbol": "PETR4", "price": "20", "lastday": "2018-09-06"}];
         this.papeis = [];
         this.lastDay = '';
@@ -88,7 +88,7 @@ var HomePage = /** @class */ (function () {
                 _this.lastPrice = myObjSTR[_this.lastDay]['4. close'];
                 _this.papeis.push({ "symbol": _this.symbol, "price": _this.lastPrice, "lastday": _this.lastDay });
             }, function (err) { return console.error(err); }, function () {
-                alert('Concluído...');
+                console.log('Concluído...');
             });
         }
         console.log('');
@@ -97,9 +97,10 @@ var HomePage = /** @class */ (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
             selector: 'page-home',template:/*ion-inline-start:"C:\Users\r.brassoroto\Documents\GitHub\myStocks\src\pages\home\home.html"*/'<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Home</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n\n  <ion-list>\n    <ion-item *ngFor="let stock of acoes">{{stock}}</ion-item>\n  </ion-list>\n\n  <div *ngFor="let stock of acoes">\n    <div>\n      {{stock}}\n    </div>\n  </div>\n\n  <div *ngFor="let papel of papeis">\n    <div>\n      {{papel.symbol}}\n      {{papel.price}}\n      {{papel.lastday}}\n    </div>\n  </div>\n\n  {{myObjJSON | async}}\n\n</ion-content>\n'/*ion-inline-end:"C:\Users\r.brassoroto\Documents\GitHub\myStocks\src\pages\home\home.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */], __WEBPACK_IMPORTED_MODULE_3__angular_common_http__["a" /* HttpClient */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3__angular_common_http__["a" /* HttpClient */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__angular_common_http__["a" /* HttpClient */]) === "function" && _b || Object])
     ], HomePage);
     return HomePage;
+    var _a, _b;
 }());
 
 //# sourceMappingURL=home.js.map
