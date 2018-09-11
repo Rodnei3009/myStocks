@@ -55,7 +55,7 @@ export class HomePage {
         },
         err => console.error(err),
         () => {
-          console.log('Finalizou')
+          alert('Concluído...')
         }
       )     
     }  
